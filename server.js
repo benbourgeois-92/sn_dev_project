@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+//in order to use req.body and add bodyParser to the server
+const bodyParser = require('body-parser');
 
 
 const users = require('./routes/api/users');
@@ -8,6 +10,13 @@ const profiles = require('./routes/api/profiles');
 const posts = require('./routes/api/posts');
 
 const app = express();
+
+//body parser middleware to use req.body- bodyParser returns 
+//a function that acts as middleware. The function listens for 
+//req.on(‘data’) and constructs req.body from the chunks of data 
+//it gets.
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 //DB config
 const db = require('./config/keys.js').mongoURI;
