@@ -19,9 +19,10 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//Password authenticates requests to protected routes
 app.use(passport.initialize());
 
-//Passport config
+//Passport configiguration (password is being passed to config below)
 require('./config/passport.js')(passport);
 
 
