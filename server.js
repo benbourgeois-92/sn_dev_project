@@ -1,6 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+//....................................
+//npm run server to start with nodemon
+
+
 //in order to use req.body and add bodyParser to the server
 const bodyParser = require('body-parser');
 const passport = require('passport');

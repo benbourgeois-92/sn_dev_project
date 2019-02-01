@@ -2,7 +2,7 @@ const validator = require('validator');
 const isEmpty = require('./is-empty.js');
 
 
-module.exports = function validateLoginInput(data) {
+module.exports = function validateProfileInput(data) {
     
     let errors = {};
     

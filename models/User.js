@@ -25,5 +25,5 @@ const UserSchema = new Schema({
     }
 
 });
-
+//Call exported collection object USER and return when required in seperate script
 module.exports = User = mongoose.model('users', UserSchema);
